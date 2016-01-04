@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      head, style {
+        display:block;
+      }
+      [contenteditable] {
+        -webkit-user-modify : read-write-plaintext-only;
+      }
+      style:first-of-type {
+        display : none;
+      }
+      style:last-of-type {
+        font-family: "Helvetica";
+        font-size: 2em;
+        border: 3px solid red;
+        padding: 5px;
+      }
+      li {
+        color: green;
+      }
+    </style>
+    <style contenteditable>
+      li[title]{
+        color: yellow;
+      }
+      a[href]{
+        text-decoration: overline;
+        font-weight: bold;
+      }
+      :first-of-type {
+        font-weight: bold;
+        font-style: italic;
+      }
+      :first-child {
+        color: orange;
+      }
+    </style>
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li title="home"><a href="#">About</a></li>
+        <li>Help</li>
+      </ul>
+    </nav>
+    <main>
+      <header contenteditable="true">
+      </header>
+      <article >
+        <ul>
+          <li title="home">summary</li>
+          <li>aspt</li>
+          <li>amnfewirgh</li>
+        </ul>
+        <input type="range" min="10" max="50">
+      </article>
+    </main>
+  <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
